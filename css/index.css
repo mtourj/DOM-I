@@ -103,6 +103,7 @@ header .logo {
     display: flex;
     margin-top: 72px;
     justify-content: flex-end;
+    margin-bottom: 55px;
 }
 
 .cta .cta-text {
@@ -134,9 +135,8 @@ header .logo {
 /* Main Content Styles */
 
 .main-content {
-   border-top: 2px solid black; 
-   border-bottom: 2px solid black;
-   margin: 75px 0 35px 0;
+   border-color: auto;
+   margin: 20px 0;
    padding: 35px 0;
    font-size: 16px;
    line-height: 18px;
@@ -162,6 +162,10 @@ header .logo {
 }
 
 /* Contact Styles */
+
+.contact {
+    margin-top: 35px;
+}
 
 .contact p {
     margin: 15px 0;
