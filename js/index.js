@@ -38,5 +38,51 @@ const siteContent = {
 };
 
 // Example: Update the img src for the logo
-let logo = document.getElementById("logo-img");
+
+// NAV
+const navItems = siteContent["nav"];
+const navElements = document.querySelectorAll("nav a");
+
+for (let i = 0; i < navElements.length; i++){
+  navElements[i].textContent = navItems["nav-item-" + (i + 1)];
+}
+
+// CTA
+const cta = document.querySelector(".cta");
+cta.querySelector(".cta-text h1").textContent = siteContent["cta"]["h1"];
+cta.querySelector(".cta-text button").textContent = siteContent["cta"]["button"];
+cta.querySelector("img").setAttribute("src", siteContent["cta"]["img-src"]);
+
+// MAIN CONTENT
+const topContent = document.querySelectorAll(".top-content .text-content");
+topContent[0].querySelector('h4').textContent = siteContent["main-content"]["features-h4"];
+topContent[0].querySelector('p').textContent = siteContent["main-content"]["features-content"];
+topContent[1].querySelector('h4').textContent = siteContent["main-content"]["about-h4"];
+topContent[1].querySelector('p').textContent = siteContent["main-content"]["about-content"];
+
+const middleImg = document.getElementById("middle-img");
+middleImg.setAttribute("src", siteContent["main-content"]["middle-img-src"]);
+
+const bottomContent = document.querySelectorAll(".bottom-content .text-content");
+bottomContent[0].querySelector('h4').textContent = siteContent["main-content"]["services-h4"];
+bottomContent[0].querySelector('p').textContent = siteContent["main-content"]["services-content"];
+bottomContent[1].querySelector('h4').textContent = siteContent["main-content"]["product-h4"];
+bottomContent[1].querySelector('p').textContent = siteContent["main-content"]["product-content"];
+bottomContent[2].querySelector('h4').textContent = siteContent["main-content"]["vision-h4"];
+bottomContent[2].querySelector('p').textContent = siteContent["main-content"]["vision-content"];
+
+// LOGO
+const logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+// CONTACT SECTION
+const contact = document.querySelector(".contact");
+contact.querySelector("h4").textContent = siteContent["contact"]["contact-h4"];
+contact.querySelectorAll("p")[0].textContent = siteContent["contact"]["address"];
+contact.querySelectorAll("p")[1].textContent = siteContent["contact"]["phone"];
+contact.querySelectorAll("p")[2].textContent = siteContent["contact"]["email"];
+
+// FOOTER
+const footer = document.querySelector("footer");
+footer.textContent = siteContent["footer"]["copyright"];
+
